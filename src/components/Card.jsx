@@ -1,4 +1,8 @@
 function Card({title, imgUrl, isVisited, children}) {
+    const visitedLabel = isVisited ?  
+        <span className="text-green-400">visited</span> :
+        <span className="text-red-500">not visited</span>    
+
     return (
         <div className="rounded-md bg-zinc-950">
             <img 
@@ -12,11 +16,7 @@ function Card({title, imgUrl, isVisited, children}) {
                 <p className="text-gray-500">
                     {children}
                 </p>
-                {isVisited ? 
-                <span className="text-green-400">visited</span>
-                    :
-                <span className="text-red-500">not visited</span>    
-                }
+                {visitedLabel}
                 </div>
         </div>
     )
