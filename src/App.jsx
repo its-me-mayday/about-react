@@ -88,7 +88,10 @@ function App() {
           count is {count}
         </button>
         <button onClick={handleClick}>alert</button>
-        <input type="text" onChange={handleChange} />
+        <input className="bg-amber-200" type="text" onChange={handleChange} />
+        <form onSubmit={handleSubmit}>
+          <button className="border-t-cyan-300" type="submit">Send!</button>
+        </form>
       </div>
     </>
   )
@@ -99,6 +102,11 @@ function handleClick() {
 }
 function handleChange(e) {
   console.log("handleChange: " + e.target.value)
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  console.log("handleSubmit: " + e.target)
 }
 
 export default App
