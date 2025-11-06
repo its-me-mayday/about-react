@@ -1,17 +1,17 @@
-function Card({title, imgUrl, isVisited, children}) {
+function Card({name, imgUrl, isVisited, children}) {
     const visitedLabel = isVisited ?  
-        <span className="text-green-400">❤️ visited</span> :
+        <span className="text-green-400 animate-pulse">❤️ visited</span> :
         <span className="text-red-500">💔 not visited</span>    
 
     return (
-        <div className="rounded-md bg-zinc-950">
-            <img 
+        <div className="rounded-b-md bg-zinc-950 hover:bg-zinc-700">
+            <img
                 src={imgUrl} alt=""> 
             </img>
             
             <div className="flex flex-col p-5">
                 <h2 className="text-amber-100 font-bold">
-                    {title}
+                    {name}
                 </h2>
                 <p className="text-gray-500">
                     {children}
