@@ -40,8 +40,28 @@ function App() {
       description: "Colorful coastal city, geothermal vibes, and gateway to Iceland’s wild nature.",
       imgUrl: "https://images.unsplash.com/photo-1465353471565-b77e538f34c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
       isVisited: false
-    }
-    
+    },
+    {
+      id: 5,
+      name: "Kyoto",
+      description: "Shrines, bamboo forests, and traditional streets full of calm and charm.",
+      imgUrl: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1740",
+      isVisited: false
+    },
+    {
+      id: 6,
+      name: "Tokyo",
+      description: "Neon streets, quiet temples, and endless food adventures day and night.",
+      imgUrl: "https://plus.unsplash.com/premium_photo-1661914240950-b0124f20a5c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      isVisited: false
+    },
+    {
+      id: 7,
+      name: "New York",
+      description: "Skyscrapers, yellow cabs, and a fast-paced city that never sleeps.",
+      imgUrl: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
+      isVisited: false
+    }, 
   ]
 
   return (
@@ -67,9 +87,18 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={handleClick}>alert</button>
+        <input type="text" onChange={handleChange} />
       </div>
     </>
   )
+}
+
+function handleClick() {
+  alert("ciao")
+}
+function handleChange(e) {
+  console.log("handleChange: " + e.target.value)
 }
 
 export default App
