@@ -1,7 +1,7 @@
 function Card({title, imgUrl, isVisited, children}) {
     const visitedLabel = isVisited ?  
-        <span className="text-green-400">visited</span> :
-        <span className="text-red-500">not visited</span>    
+        <span className="text-green-400">❤️ visited</span> :
+        <span className="text-red-500">💔 not visited</span>    
 
     return (
         <div className="rounded-md bg-zinc-950">
