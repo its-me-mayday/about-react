@@ -11,19 +11,27 @@ function App() {
       <Card 
         title="Amsterdam" 
         imgUrl = "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" 
-      ></Card>
+      >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestiae porro nesciunt sunt, soluta totam facilis corporis voluptatum error aperiam vitae sapiente harum doloribus quae molestias! Accusantium doloremque voluptatum eaque.
+      </Card>
       <Card 
         title="Rome" 
         imgUrl = "https://images.unsplash.com/photo-1548585742-1df49e753a83?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1754" 
-      ></Card>
+      >  
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestiae porro nesciunt sunt, soluta totam facilis corporis voluptatum error aperiam vitae sapiente harum doloribus quae molestias! Accusantium doloremque voluptatum eaque.
+      </Card>
       <Card 
         title="Singapore" 
         imgUrl = "https://plus.unsplash.com/premium_photo-1697730373939-3ebcaa9d295e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740" 
-      ></Card>
+      >  
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestiae porro nesciunt sunt, soluta totam facilis corporis voluptatum error aperiam vitae sapiente harum doloribus quae molestias! Accusantium doloremque voluptatum eaque.
+      </Card>
       <Card 
         title="Rovaniemi" 
         imgUrl = "https://images.unsplash.com/photo-1584380029866-f03d863766a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740" 
-      ></Card>
+      >  
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestiae porro nesciunt sunt, soluta totam facilis corporis voluptatum error aperiam vitae sapiente harum doloribus quae molestias! Accusantium doloremque voluptatum eaque.
+      </Card>
     </div>
 
       <div className="card">

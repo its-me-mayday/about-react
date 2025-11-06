@@ -1,10 +1,8 @@
-function Card({title, imgUrl}) {
-    const description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores molestiae porro nesciunt sunt, soluta totam facilis corporis voluptatum error aperiam vitae sapiente harum doloribus quae molestias! Accusantium doloremque voluptatum eaque."
-
+function Card({title, imgUrl, children}) {
     return (
         <div className="rounded-md bg-zinc-950">
             <img 
-                src={imgUrl} alt="">    
+                src={imgUrl} alt=""> 
             </img>
             
             <div className="flex flex-col p-5">
@@ -12,7 +10,7 @@ function Card({title, imgUrl}) {
                     {title}
                 </h2>
                 <p className="text-gray-500">
-                    {description}
+                    {children}
                 </p>
                 </div>
         </div>
