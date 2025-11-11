@@ -63,6 +63,13 @@ function App() {
       imgUrl: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
       isVisited: false
     }, 
+    {
+      id: 8,
+      name: "Madrid",
+      description: "Sunny boulevards, lively plazas, late-night tapas, and elegant museums.",
+      imgUrl: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+      isVisited: true
+    } 
   ]);
   
   const addCity = (city) => {
