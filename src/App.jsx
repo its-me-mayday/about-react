@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Card from './components/Card'
 import CardForm from './components/CardForm'
-import Example from './components/Example'
 
 function App() {
   const [count, setCount] = useState(0)  
+  const [post, setPost] = useState([]);
   
   const [cities, setCities] = useState([
     {
@@ -76,10 +76,20 @@ function App() {
   const addCity = (city) => {
     setCities([...cities, city])
   };
+    
+  useEffect(() => {
+        console.log("Hello from useEffect")
+
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then((response) => response.json())
+            .then((post) => {
+                setPost(post); 
+                console.log(post);
+            })
+    }, []);
 
   return (
     <>
-    <Example cities={cities}></Example>
     <CardForm addCity={addCity}></CardForm>
     <div className='grid grid-cols-4 gap-5'>
     {
@@ -97,21 +107,18 @@ function App() {
       ))
     }
     </div>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        
-        <button onClick={() => addItem()}>
-          count is {count}
-        </button>
-        
-        <form onSubmit={handleSubmit}>
-          <button className="border-t-cyan-300" type="submit">Send!</button>
-        </form>
-    
-      </div>
+    <div className='grid p-3 grid-cols-3 gap-5'>
+    {
+      post
+      .map((item) => (
+        <div key={item.id} className='bg-slate-400 rounded-lg p-3'>
+          <p className='text-red-500 font-semibold'>userid: {item.userId}</p>
+          <h2 className='text-xl'>{item.title}</h2>
+          <h3 className='text-xs'>{item.body}</h3>
+        </div>
+      ))
+    }
+    </div>
     </>
   )
 }
