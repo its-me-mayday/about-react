@@ -4,6 +4,7 @@ function Example({cities}) {
     const [count, setCount] = useState(0);
     
     useEffect(() => {
+        localStorage.setItem("count", count.toString());
         document.title = `Count: ${count}`;
         console.log("Hello from useEffect")
     }, [count, cities]);
