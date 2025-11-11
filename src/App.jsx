@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
+import CardForm from './components/CardForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)  
   
-  const cities = [
+  const [cities, setCities] = useState([
     {
       id: 0,
       name: "Amsterdam",
@@ -62,10 +63,15 @@ function App() {
       imgUrl: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740",
       isVisited: false
     }, 
-  ]
+  ]);
+  
+  const addCity = (city) => {
+    setCities([...cities, city])
+  };
 
   return (
     <>
+    <CardForm addCity={addCity}></CardForm>
     <div className='grid grid-cols-4 gap-5'>
     {
       cities
@@ -87,21 +93,18 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={handleClick}>alert</button>
-        <input className="bg-amber-200" type="text" onChange={handleChange} />
+        
+        <button onClick={() => addItem()}>
+          count is {count}
+        </button>
+        
         <form onSubmit={handleSubmit}>
           <button className="border-t-cyan-300" type="submit">Send!</button>
         </form>
+    
       </div>
     </>
   )
-}
-
-function handleClick() {
-  alert("ciao")
-}
-function handleChange(e) {
-  console.log("handleChange: " + e.target.value)
 }
 
 function handleSubmit(e) {
