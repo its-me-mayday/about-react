@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Card from './components/Card'
 import CardForm from './components/CardForm'
+import Example from './components/Example'
 
 function App() {
   const [count, setCount] = useState(0)  
@@ -78,6 +79,7 @@ function App() {
 
   return (
     <>
+    <Example cities={cities}></Example>
     <CardForm addCity={addCity}></CardForm>
     <div className='grid grid-cols-4 gap-5'>
     {
